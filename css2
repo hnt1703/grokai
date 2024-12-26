@@ -1,0 +1,14 @@
+﻿@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/monoton/v20/5h1aiZUrOngCibe4fkY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/vt323/v17/pxiKyp0ihIEF2hsY.ttf) format('truetype');
+}
