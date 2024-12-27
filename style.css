@@ -9,8 +9,10 @@ body {
     background: black;
     color: #00ff00;
     font-family: 'VT323', monospace; /* Áp dụng font cho toàn bộ trang */
-    .navbar, .title, .content, .mew-image 
-        font-family: 'VT323', monospace; /* Áp dụng font cho các phần tử cụ thể nếu cần */
+}
+.navbar, .title, .content, .mew-image {
+    margin: auto
+    font-family: 'VT323', monospace; /* Áp dụng font cho các phần tử cụ thể nếu cần */
 }
 h1 {
     font-family: 'VT323', monospace;
@@ -67,7 +69,7 @@ canvas {
 }
 .mew-image {
     display: block;
-    margin: 20px auto;
+    margin: auto;
     max-width: 60%;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho cả hai */
@@ -105,3 +107,38 @@ canvas {
     src: url('fonts/matrix.ttf') format('truetype'); /* Đường dẫn đến file font */
 }
 
+@keyframes breathe {
+    0% {
+        transform: scale(1); /* Kích thước ban đầu */
+    }
+    50% {
+        transform: scale(1.1); /* Phóng to 10% */
+    }
+    100% {
+        transform: scale(1); /* Quay lại kích thước ban đầu */
+    }
+}
+
+.chart-link {
+    color: #00ff00; /* Màu sắc chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+    animation: breathe 2s infinite !important; /* Thêm hiệu ứng thở */
+}
+
+.typing-effect {
+    border-right: 2px solid #00ff00; /* Đường gạch chân bên phải */
+    white-space: nowrap; /* Không cho xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản không hiển thị */
+    width: 0; /* Bắt đầu với chiều rộng 0 */
+    animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite; /* Thêm hiệu ứng đánh chữ và nhấp nháy */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #00ff00; }
+}

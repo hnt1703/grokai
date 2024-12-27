@@ -44,3 +44,21 @@ window.onload = function() {
         mewContainer.style.opacity = 1; // Thay đổi độ mờ thành 1 sau 2 giây
     }, 2000); // Thời gian chờ 2 giây
 };
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const text = "ΑιGгΟk is an AI-assisted investment fund targeting a blend of large, mid, and small-cap AI opportunities. Powered by ΑιGгΟk’s proprietary dataset and algorithms, it combines human expertise with AI analysis to identify transformative projects across the AI landscape. As the fund evolves, it will transition to fully AI-driven strategies, delivering precision and real-time insights to shape the future of autonomous finance.";
+    
+    const textElement = document.getElementById("text");
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, 50); // Thay đổi tốc độ đánh chữ tại đây
+        }
+    }
+
+    type(); // Bắt đầu hiệu ứng đánh chữ
+});
