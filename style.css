@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('fonts/vt323.ttf') format('truetype'); /* Đường dẫn đến file font */
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    color: #00ff00;
+    font-family: 'VT323', monospace; /* Áp dụng font cho toàn bộ trang */
+    .navbar, .title, .content, .mew-image 
+        font-family: 'VT323', monospace; /* Áp dụng font cho các phần tử cụ thể nếu cần */
+}
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 2em; /* Hoặc kích thước bạn mong muốn */
+    color: #000; /* Màu sắc bạn muốn */
+}
+canvas {
+    display: block;
+}
+.content {
+    position: absolute;
+    top: 20%; /* Đặt nội dung chữ ở vị trí cao hơn */
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.content h1 {
+    font-size: 5rem;
+}
+.content p {
+    font-size: 2rem;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.navbar .social-links a {
+    margin: 0 50px;
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.navbar .social-links a:hover {
+    color: white;
+}
+.navbar .title {
+    font-size: 2rem;
+}
+.mew-container {
+    position: absolute;
+    top: 50%; /* Đặt hình ảnh ở vị trí thấp hơn */
+    left: 50%;
+    transform: translate(-00%, -50%);
+    opacity: 0;
+    transition: opacity 2s;
+}
+.mew-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 60%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho cả hai */
+}
+
+
+.mew-image:hover {
+    transform: scale(1.1) rotate(5deg); /* Phóng to và xoay khi di chuột */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Thêm bóng đổ */
+}
+
+.combined-container {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao của container */
+}
+.content {
+    width: 70%; /* Đặt chiều rộng khung chữ */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    margin: 220px auto 0; /* Căn giữa khung chữ và thêm khoảng cách trên */
+    padding: 15px; /* Thêm khoảng cách bên trong khung chữ */
+    background-color: rgba(0, 0, 0, 0.8); /* Thêm màu nền nếu cần */
+    border-radius: 10px; /* Bo góc khung chữ */
+    text-align: center; /* Căn giữa nội dung bên trong */
+}
+
+.combined-container h1 {
+    font-family: 'MatrixFont'; /* Đổi font chữ cho h1 */
+    font-size: 36px; /* Kích thước chữ */
+    color: #ffffff; /* Màu chữ */
+
+@font-face {
+    font-family: 'MatrixFont';
+    src: url('fonts/matrix.ttf') format('truetype'); /* Đường dẫn đến file font */
+}
+
