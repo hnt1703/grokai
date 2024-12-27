@@ -70,7 +70,7 @@ canvas {
 .mew-image {
     display: block;
     margin: auto;
-    max-width: 60%;
+    max-width: 55%;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho cả hai */
 }
